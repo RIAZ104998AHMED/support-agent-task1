@@ -1,46 +1,66 @@
-# Support Agent Task 1
+﻿# Support Agent Task 1
 
-This project implements an automated customer support ticket processor for the foundation patterns assignment.
+This project implements an automated customer support ticket processor using four foundational LLM design patterns: Prompt Chaining, Routing, Parallelization, and Reflection.
 
-## Patterns covered
+---
+
+## Architecture Overview
+
+The system processes a raw support message through multiple stages:
+
+1. Preprocessing → cleans and normalizes input  
+2. Classification → extracts structured data and determines category  
+3. Parallel Analysis → sentiment + keyword extraction  
+4. Routing → selects a specialized branch  
+5. Response Generation → produces a draft reply  
+6. Reflection → critiques and improves the response  
+
+---
+
+## Patterns Covered
 
 ### 1. Prompt Chaining
-Three sequential LLM calls:
-- preprocessing
-- classification
-- response generation
+A sequential pipeline of 3 LLM calls:
+- Preprocessing (clean text)
+- Classification (structured JSON output)
+- Response generation (based on structured data)
 
 ### 2. Routing
-After classification, tickets are routed to one of:
-- order_cancel
-- technical_issue
-- billing_refund
-- general_inquiry
-- complaint_escalation
+Tickets are dynamically routed into specialized branches:
+- `order_cancel`
+- `technical_issue`
+- `billing_refund`
+- `general_inquiry`
+- `complaint_escalation`
+
+Each branch uses a different prompt and logic.
 
 ### 3. Parallelization
-Two independent subtasks run concurrently using `asyncio.gather()`:
-- sentiment analysis
-- keyword/entity extraction
+Two independent tasks run concurrently using `asyncio.gather()`:
+- Sentiment analysis
+- Keyword & entity extraction
 
 ### 4. Reflection
 The system:
-- generates a first draft
-- critiques it
-- improves it
-- prints a visible change log
+- Generates a first draft
+- Critiques it using the LLM
+- Produces an improved version
+- Logs the changes
+
+---
 
 ## Dataset
-The main dataset uses `cancel_order` examples from the provided data.
-Extra manually added tickets are included to cover additional routes required by the rubric.
 
-Files:
 - `data/cancel_order_dataset.tsv`
 - `data/extra_routes.json`
 
+Includes at least 10 support messages covering all routing categories.
+
+---
+
 ## Setup
 
-Create and activate a virtual environment if desired, then install dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt

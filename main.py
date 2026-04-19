@@ -17,7 +17,6 @@ async def main() -> None:
 
     print(f"Loaded {len(tickets)} tickets.\n")
 
-    # Show first 10 in demo
     for i, ticket in enumerate(tickets[:10], start=1):
         print("\n" + "=" * 100)
         print(f"TICKET #{i}")
@@ -25,10 +24,12 @@ async def main() -> None:
         print("DATASET LABEL:", ticket.get("intent"))
         print("RAW INPUT:", ticket["user_message"])
 
-        result = await processor.process_ticket(ticket["user_message"])
-
-        print("\nFINAL STRUCTURED RESULT:")
-        print(json.dumps(result, indent=2, ensure_ascii=False))
+        try:
+            result = await processor.process_ticket(ticket["user_message"])
+            print("\nFINAL STRUCTURED RESULT:")
+            print(json.dumps(result, indent=2, ensure_ascii=False))
+        except Exception as e:
+            print(f"\n[ERROR] Failed to process ticket #{i}: {e}")
 
     print("\nDone.")
 
