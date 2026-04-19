@@ -1,0 +1,32 @@
+{
+    "tickets": [
+        {
+            "code": "TECH1",
+            "user_message": "the app crashes every time i open settings on my phone",
+            "domain": "APP",
+            "intent": "technical_support",
+            "reference_response": "Provide troubleshooting steps and ask for device/app version."
+        },
+        {
+            "code": "BILL1",
+            "user_message": "I was charged twice for my subscription invoice INV-8842",
+            "domain": "BILLING",
+            "intent": "refund_request",
+            "reference_response": "Apologize, verify the duplicate charge, and explain refund review."
+        },
+        {
+            "code": "GEN1",
+            "user_message": "what are your shipping times for europe orders?",
+            "domain": "GENERAL",
+            "intent": "shipping_question",
+            "reference_response": "Answer with shipping information."
+        },
+        {
+            "code": "COMP1",
+            "user_message": "this is ridiculous, nobody helped me and I want a supervisor",
+            "domain": "GENERAL",
+            "intent": "complaint",
+            "reference_response": "Acknowledge frustration and escalate."
+        }
+    ]
+}

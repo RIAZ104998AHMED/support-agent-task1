@@ -1,0 +1,23 @@
+code	user_message	domain	intent	reference_response
+
+code	user_message	domain	intent	reference_response
+B	question about cancelling order {{Order Number}}	ORDER	cancel_order	I've understood you have a question regarding canceling order {{Order Number}}, and I'm here to provide you with the information you need.
+BQZ	i have a question about cancelling oorder {{Order Number}}	ORDER	cancel_order	I've been informed that you have a question about canceling order {{Order Number}}. I'm here to assist you!
+BLQZ	i need help cancelling puchase {{Order Number}}	ORDER	cancel_order	I can sense that you're seeking assistance with canceling your purchase with the purchase number {{Order Number}}.
+BL	I need to cancel purchase {{Order Number}}	ORDER	cancel_order	I understood that you need assistance with canceling your purchase with the order number {{Order Number}}.
+BCELN	I cannot afford this order, cancel purchase {{Order Number}}	ORDER	cancel_order	I'm sensitive to the fact that you're facing financial difficulties and need to cancel your purchase with the order number {{Order Number}}.
+BI	can you help me cancel order {{Order Number}}?	ORDER	cancel_order	Of course, I'm here to assist you in canceling your order with the number {{Order Number}}.
+BCLN	I can no longer afford order {{Order Number}}, cancel it	ORDER	cancel_order	I pick up what you're putting down that you're in a situation where you can no longer afford to proceed with order {{Order Number}}.
+BL	I am trying to cancel purchase {{Order Number}}	ORDER	cancel_order	I've understood that you're seeking assistance in canceling purchase {{Order Number}}.
+BL	I have got to cancel purchase {{Order Number}}	ORDER	cancel_order	I'm sensitive to the fact that you're seeking assistance with canceling your purchase of item {{Order Number}}.
+BLQ	i need help canceling purchase {{Order Number}}	ORDER	cancel_order	I perceive that you're seeking assistance with canceling your purchase with order number {{Order Number}}.
+BQ	i dont know what to do to cancel order {{Order Number}}	ORDER	cancel_order	I've taken note that you're unsure of the cancellation process for your order with the order number {{Order Number}}.
+BL	I have a problem with cancelling purchase {{Order Number}}	ORDER	cancel_order	I'm following you that you're facing difficulties with canceling your purchase of item {{Order Number}}.
+BL	problem with canceling purchase {{Order Number}}	ORDER	cancel_order	I'm aware that you're facing difficulties canceling your purchase with the order number {{Order Number}}.
+BI	can you help me canceling order {{Order Number}}?	ORDER	cancel_order	I comprehend the urgency and complexity involved in canceling your order with the number {{Order Number}}.
+BLZ	help me canceling purchase {{Order Number}}	ORDER	cancel_order	I catch on to the fact that you're seeking assistance with canceling purchase {{Order Number}}.
+BIL	can you help me cancel purchase {{Order Number}}?	ORDER	cancel_order	Certainly, I'm here to assist you with canceling your purchase with the purchase number {{Order Number}}.
+BCL	I bought the same item twice, cancel order {{Order Number}}	ORDER	cancel_order	I understand the frustration that arises when purchasing the same item twice.
+BMQ	i have problems with canceling order {{Order Number}}	ORDER	cancel_order	I've been informed that you're facing some difficulties with canceling order {{Order Number}}.
+BZ	help cnceling order {{Order Number}}	ORDER	cancel_order	I can relate to the understanding that you need assistance with canceling order {{Order Number}}.
+BLWZ	help me to cancel my last goddamn purchase	ORDER	cancel_order	I've picked up that you're feeling frustrated and would like assistance with canceling your most recent purchase.
